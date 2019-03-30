@@ -37,6 +37,7 @@ let allProjects =
     libProjects
     ++ "demo/Demo.App/*.fsproj"
     ++ "demo/Demo.Fabulous/*.fsproj"
+    ++ "demo/Demo.Ooui/*.fsproj"
 
 DotNet.create (DotNet.mixed libProjects) allProjects
 

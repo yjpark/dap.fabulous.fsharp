@@ -63,7 +63,6 @@
     <Compile Include="Helper.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dap.Gui\Dap.Gui.fsproj" />
     <ProjectReference Include="..\Dap.Fabulous.Controls\Dap.Fabulous.Controls.csproj" />
   </ItemGroup>
   <ItemGroup>

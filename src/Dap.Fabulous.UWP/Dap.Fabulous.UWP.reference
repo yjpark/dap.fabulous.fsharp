@@ -27,8 +27,8 @@
   </ItemGroup>
   <!--Not working, can't include netstandard lib inside UAP lib, so make this a shared project
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\yjpark\dap.gui.fsharp\src\Dap.Fabulous.UWP\Dap.Fabulous.UWP.csproj" />
+    <ProjectReference Include="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous.UWP\Dap.Fabulous.UWP.csproj" />
   </ItemGroup>
   -->
-  <Import Project="..\..\..\..\yjpark\dap.gui.fsharp\src\Dap.Fabulous.UWP\Dap.Fabulous.UWP.projitems" Label="Shared" />
+  <Import Project="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous.UWP\Dap.Fabulous.UWP.projitems" Label="Shared" />
 </Project>
