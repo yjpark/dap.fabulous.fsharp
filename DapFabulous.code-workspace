@@ -1,16 +1,31 @@
 {
 	"folders": [
 		{
-			"path": "src""
+			"path": "src/Dap.Fabulous.Controls"
+		},
+		{
+			"path": "src/Dap.Fabulous"
+		},
+		{
+			"path": "src/Dap.Fabulous.Android"
+		},
+		{
+			"path": "src/Dap.Fabulous.iOS"
+		},
+		{
+			"path": "src/Dap.Fabulous.Mac"
+		},
+		{
+			"path": "src/Dap.Fabulous.UWP"
+		},
+		{
+			"path": "src/Dap.Fabulous.Forms"
+		},
+		{
+			"path": "src/Dap.Fabulous.Ooui"
 		},
 		{
 			"path": "demo"
-		},
-		{
-			"path": "old"
-		},
-		{
-			"path": "faker"
 		},
 	],
     "settings": {

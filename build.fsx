@@ -2,22 +2,8 @@
 #r "paket: groupref Main //"
 #load ".fake/build.fsx/intellisense.fsx"
 
-#load "src/Dap.Gui/Dsl/Models.fs"
-#load "src/Dap.Gui/Dsl/PaletteParam.fs"
-//(*
-#load "src/Dap.Gui/_Gen/Models.fs"
-#load "src/Dap.Gui/_Gen/Builder/Models.fs"
-#load "src/Dap.Gui/_Gen/Builder/Internal/Base.fs"
-#load "src/Dap.Gui/ContainerKind.fs"
-#load "src/Dap.Gui/Builder/Helper.fs"
-#load "src/Dap.Gui/Generator/Types.fs"
-#load "src/Dap.Gui/Generator/Prefab.fs"
-#load "src/Dap.Gui/Generator/Helper.fs"
-#load "src/Dap.Gui/Dsl1/Prefabs.fs"
-
 #load "demo/Demo.App/Dsl.fs"
 #load "demo/Demo.Gui/Dsl/Prefabs.fs"
-//*)
 
 open Fake.Core
 open Fake.Core.TargetOperators
@@ -40,132 +26,30 @@ let feed =
     )
 
 let libProjects =
-    !! "src/Dap.Skia/*.fsproj"
-    ++ "src/Dap.Gui/*.fsproj"
-    ++ "src/Dap.Gtk/*.fsproj"
-    ++ "src/Dap.UWP.Cli/*.csproj"
-    ++ "src/Dap.UWP/*.fsproj"
-    ++ "src/Dap.iOS/*.fsproj"
-    ++ "src/Dap.Android/*.fsproj"
-    ++ "src/Dap.Mac/*.fsproj"
-    ++ "src/Dap.Myra/*.fsproj"
-    ++ "src/Dap.Fabulous.Controls/*.csproj"
+    !! "src/Dap.Fabulous.Controls/*.csproj"
     ++ "src/Dap.Fabulous/*.fsproj"
-    ++ "src/Dap.Fabulous.iOS/*.fsproj"
     ++ "src/Dap.Fabulous.Android/*.fsproj"
+    ++ "src/Dap.Fabulous.iOS/*.fsproj"
     ++ "src/Dap.Fabulous.Mac/*.fsproj"
     ++ "src/Dap.Fabulous.Forms/*.fsproj"
     ++ "src/Dap.Fabulous.Ooui/*.fsproj"
-    ++ "src/Dap.Yoga/*.fsproj"
-    ++ "src/Dap.Yoga.Gtk/*.fsproj"
-    ++ "src/Dap.Yoga.Myra/*.fsproj"
 
 let allProjects =
     libProjects
     ++ "demo/Demo.App/*.fsproj"
     ++ "demo/Demo.Fabulous/*.fsproj"
-    ++ "demo/Demo.Ooui/*.fsproj"
-    ++ "demo/Demo.Gui/*.fsproj"
-    ++ "demo/Demo.Myra/*.fsproj"
-    ++ "demo/Demo.Gtk/*.fsproj"
 
 DotNet.create (DotNet.mixed libProjects) allProjects
 
 NuGet.extend NuGet.release feed libProjects
 
 DotNet.createPrepares [
-    ["Dap.Gui"], fun _ ->
-        Dap.Gui.Dsl.Models.compile ["src" ; "Dap.Gui"]
-        |> List.iter traceSuccess
-        Dap.Gui.Dsl.PaletteParam.compile ["src" ; "Dap.Gui"]
-        |> List.iter traceSuccess
-        //(*
-        Dap.Gui.Dsl.Prefabs.compile ["src" ; "Dap.Gui"]
-        |> List.iter traceSuccess
-        //*)
-    //(*
     ["Demo.App"], fun _ ->
         Demo.App.Dsl.compile ["demo" ; "Demo.App"]
         |> List.iter traceSuccess
     ["Demo.Gui"], fun _ ->
         Demo.Gui.Dsl.Prefabs.compile ["demo" ; "Demo.Gui"]
         |> List.iter traceSuccess
-    //*)
 ]
-
-type Ionicons = XmlProvider<"src/Dap.Skia/Data/ionicons.svg">
-type Glyph = {
-    Name : string
-    Code : string
-} with
-    static member Create name code : Glyph =
-        {
-            Name = name
-            Code = code
-        }
-
-Target.create "IoniconsGlyph" (fun _ ->
-    let ionicons = Ionicons.Parse (System.IO.File.ReadAllText "src/Dap.Skia/Data/ionicons.svg")
-    let glyphs =
-        ionicons.Defs.Font.Glyphs
-        |> Array.map (fun glyph ->
-            ((int) glyph.Unicode.[0]) .ToString ("x")
-            |> Glyph.Create glyph.GlyphName
-        )
-    let filterGlyphs (prefix : string) =
-        glyphs
-        |> Array.choose (fun glyph ->
-            if glyph.Name.StartsWith (prefix) then
-                Some {glyph with Name = glyph.Name.Replace (prefix, "")}
-            else
-                None
-        )
-    let mdIcons = filterGlyphs "ion-md-"
-    let iosIcons = filterGlyphs "ion-ios-"
-    let logoIcons = filterGlyphs "ion-logo-"
-    let otherIcons =
-        glyphs
-        |> Array.filter (fun g ->
-            let name = g.Name
-            not (name.StartsWith "ion-md-")
-                && not (name.StartsWith "ion-ios-")
-                && not (name.StartsWith "ion-logo-")
-        )
-    let getGlyphMembers (glyphs : Glyph array) =
-        glyphs
-        |> Array.toList
-        |> List.map (fun g -> {g with Name = g.Name.Replace ("-", "_")})
-        |> List.map (fun g -> {g with Name = g.Name.AsCodeMemberName})
-        |> List.sortBy (fun g -> g.Name)
-        |> List.map (fun g ->
-            sprintf "    member __.%s = '\\u%s'.ToString ()" g.Name g.Code
-        )
-    let getOtherIcons () =
-        if otherIcons.Length = 0 then
-            [
-                "type OtherIcons () = class"
-                "    end"
-            ]
-        else
-            [
-                "type OtherIcons () ="
-            ] @ getGlyphMembers otherIcons
-    [
-        "module Dap.Skia.IoniconsGlyph"
-        "//Auto Generated, Do NOT Edit"
-        ""
-        "type MDIcons () ="
-    ] @ getGlyphMembers mdIcons @ [
-        ""
-        "type IOSIcons () ="
-    ] @ getGlyphMembers iosIcons @ [
-        ""
-        "type LogoIcons () ="
-    ] @ getGlyphMembers logoIcons @ [
-        ""
-    ] @ getOtherIcons ()
-    |> String.concat "\n"
-    |> Dap.Local.TextFile.save "src/Dap.Skia/Fonts/IoniconsGlyph.fs"
-)
 
 Target.runOrDefault DotNet.Build

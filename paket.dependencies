@@ -12,6 +12,9 @@ nuget Dap.Platform.Cli 0.6.0
 nuget Dap.Platform 0.6.10
 nuget Dap.Local 0.6.8
 
+nuget Dap.Skia 0.6.4
+nuget Dap.Gui 0.6.14
+
 //Forms
 nuget Xamarin.Forms
 nuget Xamarin.Essentials
@@ -24,21 +27,6 @@ nuget Fabulous.LiveUpdate
 //Ooui
 nuget Ooui.Forms
 
-//Skia
-nuget SkiaSharp
-nuget SkiaSharp.Views
-nuget SkiaSharp.Views.Forms
-
-//Yoga
-nuget Facebook.Yoga
-
-//Gtk
-nuget GtkSharp
-
-//Myra
-nuget MonoGame.Framework.DesktopGL.Core
-nuget Myra
-
 //group Build
 nuget Dap.Build 0.6.9
 
@@ -46,6 +34,3 @@ clitool dotnet-sourcelink
 nuget Microsoft.SourceLink.GitHub 1.0.0-beta-62925-02
 nuget Microsoft.Build.Tasks.Git 1.0.0-beta-62925-02
 nuget Microsoft.SourceLink.Common 1.0.0-beta-62925-02
-
-//For Glyph Generator
-nuget FSharp.Data
