@@ -3,7 +3,6 @@
 #load ".fake/build.fsx/intellisense.fsx"
 
 #load "demo/Demo.App/Dsl.fs"
-#load "demo/Demo.Gui/Dsl/Prefabs.fs"
 
 open Fake.Core
 open Fake.Core.TargetOperators
@@ -46,9 +45,6 @@ NuGet.extend NuGet.release feed libProjects
 DotNet.createPrepares [
     ["Demo.App"], fun _ ->
         Demo.App.Dsl.compile ["demo" ; "Demo.App"]
-        |> List.iter traceSuccess
-    ["Demo.Gui"], fun _ ->
-        Demo.Gui.Dsl.Prefabs.compile ["demo" ; "Demo.Gui"]
         |> List.iter traceSuccess
 ]
 

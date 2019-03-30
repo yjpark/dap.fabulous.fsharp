@@ -17,7 +17,6 @@ nuget Dap.Gui 0.6.14
 
 //Forms
 nuget Xamarin.Forms
-nuget Xamarin.Essentials
 
 //Fabuous
 nuget Fabulous.Core
