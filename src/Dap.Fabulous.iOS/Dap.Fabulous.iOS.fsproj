@@ -78,6 +78,7 @@
     <Compile Include="Helper.fs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dap.Fabulous.Controls\Dap.Fabulous.Controls.csproj" />
     <ProjectReference Include="..\Dap.Fabulous\Dap.Fabulous.fsproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" />
