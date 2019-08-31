@@ -25,7 +25,7 @@
     <key>CFBundleDisplayName</key>
     <string>Gui.Demo</string>
     <key>CFBundleIdentifier</key>
-    <string>org.yjpark.gui.demo</string>
+    <string>org.yjpark.fabulous.demo</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>
