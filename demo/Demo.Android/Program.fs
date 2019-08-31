@@ -10,7 +10,6 @@ open Dap.Android
 open Dap.Fabulous.Android
 
 open Demo.App
-open Demo.Gui
 open Demo.Fabulous
 
 let useFabulous = true

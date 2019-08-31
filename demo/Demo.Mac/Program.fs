@@ -9,7 +9,6 @@ open Dap.Mac
 open Dap.Fabulous.Mac
 
 open Demo.App
-open Demo.Gui
 open Demo.Fabulous
 
 let useFabulous = true
