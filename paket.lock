@@ -23,7 +23,7 @@ NUGET
     Dap.Context (0.8)
       Dap.Prelude (>= 0.8)
       Thoth.Json.Net (>= 3.0)
-    Dap.Gui (0.8)
+    Dap.Gui (0.8.1)
       Dap.Local (>= 0.8)
       Dap.Skia (>= 0.8)
       Xamarin.Essentials (>= 1.2)
