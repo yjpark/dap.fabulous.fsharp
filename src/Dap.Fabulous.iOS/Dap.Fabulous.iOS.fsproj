@@ -55,8 +55,14 @@
     <Reference Include="mscorlib" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.4.3.3\lib\netstandard1.6\FSharp.Core.dll</HintPath>
+      <Version>4.7</Version>
+      <!--<HintPath>..\packages\FSharp.Core.4.3.3\lib\netstandard1.6\FSharp.Core.dll</HintPath>-->
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dap.iOS">
+      <Version>0.8.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Types.fs" />
@@ -71,6 +77,8 @@
     <Compile Include="Renderer/Exports.fs" />
     <Compile Include="Helper.fs" />
   </ItemGroup>
-  <Import Project="Dap.Fabulous.iOS.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dap.Fabulous\Dap.Fabulous.fsproj" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" />
 </Project>

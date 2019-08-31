@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <Import Project="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous\Dap.Fabulous.packages" />
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous.Controls\Dap.Fabulous.Controls.csproj" />
-    <ProjectReference Include="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous\Dap.Fabulous.fsproj" />
-  </ItemGroup>
-</Project>

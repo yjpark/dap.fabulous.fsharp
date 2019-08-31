@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <ItemGroup>
-    <PackageReference Include="Dap.Android">
-      <Version>0.6.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <Import Project="..\..\..\..\yjpark\dap.fabulous.fsharp\src\Dap.Fabulous\Dap.Fabulous.reference" />
-</Project>
