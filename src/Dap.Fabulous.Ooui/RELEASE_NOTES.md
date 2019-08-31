@@ -1,3 +1,6 @@
+## 0.8.0
+* Follow lib changes
+
 ## 0.6.1
 * Add IGuiApp.Runtime for GuiRuntime
 
