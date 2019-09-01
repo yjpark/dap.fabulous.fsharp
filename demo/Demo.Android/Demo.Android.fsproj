@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dap.Android\Dap.Android.fsproj" />
+    <ProjectReference Include="..\..\src\Dap.Fabulous\Dap.Fabulous.fsproj" />
     <ProjectReference Include="..\..\src\Dap.Fabulous.Android\Dap.Fabulous.Android.fsproj" />
     <ProjectReference Include="..\Demo.App\Demo.App.fsproj">
       <Project>{31E851C3-E4DE-40C7-8078-A055955B4819}</Project>

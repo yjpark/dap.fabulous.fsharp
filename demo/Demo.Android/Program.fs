@@ -12,7 +12,7 @@ open Dap.Fabulous.Android
 open Demo.App
 open Demo.Fabulous
 
-[<Activity (Label = "Gui.Demo", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")>]
+[<Activity (Label = "Fabulous.Demo", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")>]
 type MainActivity () =
     inherit FabulousActivity ()
     override this.UseFabulous () = true
@@ -23,15 +23,3 @@ type MainActivity () =
         setFabulousAndroidParam param
         App.RunFabulous ("demo-.log")
         |> ignore
-
-(* Without Fabulous
-[<Activity (Label = "Gui.Demo", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")>]
-type MainActivity () =
-    inherit Activity ()
-    override this.OnCreate (bundle: Bundle) =
-        base.OnCreate (bundle)
-        this.SetContentView (Resources.Layout.Main)
-        setAndroidParam <| AndroidParam.Create ("Demo", this, backgroundColor = Android.Graphics.Color.Black)
-        App.RunGui ("demo-.log")
-        |> ignore
-*)

@@ -1,3 +1,6 @@
+## 0.8.2
+* Update DapGui verison in project file
+
 ## 0.8.1
 * Follow DapGui changes
 

@@ -7,7 +7,7 @@
     <PackageProjectUrl>https://github.com/yjpark/dap.gui.fsharp</PackageProjectUrl>
     <PackageTags>fsharp;dap;gui;android</PackageTags>
     <Authors>YJ Park</Authors>
-    <Version>0.8.1</Version>
+    <Version>0.8.2</Version>
     <Description>Fabulous App on Android</Description>
   </PropertyGroup>
   <PropertyGroup>
@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dap.Android">
-      <Version>0.8.0</Version>
+      <Version>0.8.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
