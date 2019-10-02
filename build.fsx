@@ -1,5 +1,5 @@
-(* FAKE: 5.12.1 *)
-#r "paket: groupref Main //"
+(* FAKE: 5.16.1 *)
+#r "paket: groupref Build //"
 #load ".fake/build.fsx/intellisense.fsx"
 
 #load "demo/Demo.App/Dsl.fs"
