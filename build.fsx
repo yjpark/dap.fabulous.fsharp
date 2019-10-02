@@ -2,8 +2,6 @@
 #r "paket: groupref Build //"
 #load ".fake/build.fsx/intellisense.fsx"
 
-#load "demo/Demo.App/Dsl.fs"
-
 open Fake.Core
 open Fake.Core.TargetOperators
 open Fake.IO.Globbing.Operators
@@ -24,7 +22,7 @@ let feed =
         //apiKey = NuGet.Environment "API_KEY_nuget_yjpark_org"
     )
 
-let libProjects =
+let projects =
     !! "src/Dap.Fabulous.Controls/*.csproj"
     ++ "src/Dap.Fabulous/*.fsproj"
     ++ "src/Dap.Fabulous.Android/*.fsproj"
@@ -33,20 +31,7 @@ let libProjects =
     ++ "src/Dap.Fabulous.Forms/*.fsproj"
     ++ "src/Dap.Fabulous.Ooui/*.fsproj"
 
-let allProjects =
-    libProjects
-    ++ "demo/Demo.App/*.fsproj"
-    ++ "demo/Demo.Fabulous/*.fsproj"
-    ++ "demo/Demo.Ooui/*.fsproj"
-
-DotNet.create (DotNet.mixed libProjects) allProjects
-
-NuGet.extend NuGet.release feed libProjects
-
-DotNet.createPrepares [
-    ["Demo.App"], fun _ ->
-        Demo.App.Dsl.compile ["demo" ; "Demo.App"]
-        |> List.iter traceSuccess
-]
+NuGet.create NuGet.release feed projects
 
 Target.runOrDefault DotNet.Build
+
