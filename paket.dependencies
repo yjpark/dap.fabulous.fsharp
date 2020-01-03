@@ -23,6 +23,12 @@ nuget Fabulous.Core
 nuget Fabulous.CustomControls
 nuget Fabulous.LiveUpdate
 
+# Uno
+nuget Uno.Xamarin.Forms.Platform
+nuget Uno.Wasm.Bootstrap
+nuget Uno.Ui
+clitool Uno.Wasm.Bootstrap.Cli
+
 # Ooui
 nuget Ooui.Forms
 

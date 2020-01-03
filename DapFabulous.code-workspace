@@ -22,6 +22,9 @@
 			"path": "src/Dap.Fabulous.Forms"
 		},
 		{
+			"path": "src/Dap.Fabulous.Uno"
+		},
+		{
 			"path": "src/Dap.Fabulous.Ooui"
 		},
 		{
