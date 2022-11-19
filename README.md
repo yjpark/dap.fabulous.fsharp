@@ -1,2 +1,2 @@
-# angeldnd.dap.gui.fsharp
-Dap's GUI lib
+# dap.fabulous.fsharp
+Some libs for using fabulous with Dap applications
