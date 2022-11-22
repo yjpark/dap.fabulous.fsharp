@@ -7,7 +7,7 @@
     <PackageTags>fsharp;dap;</PackageTags>
     <Authors>YJ Park</Authors>
     <Version>0.9.0</Version>
-    <Description>Dap Custom Controls for Xamarin.Forms</Description>
+    <Description>Dap Custom Controls for Microsoft.MAUI.Controls</Description>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />

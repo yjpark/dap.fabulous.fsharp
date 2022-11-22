@@ -1,6 +1,6 @@
 using System;
 
-using Xamarin.Forms;
+using Microsoft.MAUI.Controls;
 
 /*
  * Did implement TextActionCell in pure F#, got everything compiled and running.
