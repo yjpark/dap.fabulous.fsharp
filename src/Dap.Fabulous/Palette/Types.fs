@@ -1,6 +1,7 @@
 [<AutoOpen>]
 module Dap.Fabulous.Palette.Types
 
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 
 open Dap.Prelude

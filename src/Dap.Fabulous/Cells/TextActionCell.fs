@@ -3,6 +3,7 @@ module Dap.Fabulous.TextActionCell
 
 open System
 
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 open Fabulous.DynamicViews
 

@@ -1,8 +1,8 @@
 module Dap.Fabulous.View.Types
 
 open System.Threading.Tasks
-open FSharp.Control.Tasks.V2
 
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 open Fabulous.Core
 open Fabulous.DynamicViews

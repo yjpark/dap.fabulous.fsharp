@@ -1,6 +1,7 @@
 [<AutoOpen>]
 module Dap.Fabulous.BaseForm
 
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 open Fabulous.DynamicViews
 

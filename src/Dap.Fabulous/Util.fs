@@ -2,7 +2,8 @@
 module Dap.Fabulous.Util
 
 open System.Threading.Tasks
-open Xamarin.Essentials
+open Microsoft.Maui.Essentials
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 open Fabulous.DynamicViews
 

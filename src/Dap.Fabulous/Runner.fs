@@ -2,7 +2,7 @@
 module Dap.Fabulous.Runner
 
 open System.Threading.Tasks
-open FSharp.Control.Tasks.V2
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 
 open Dap.Prelude
