@@ -16,6 +16,7 @@ nuget Dap.Skia
 nuget Dap.Gui
 
 # Fabuous
+nuget Microsoft.Maui.Controls
 nuget Fabulous.MauiControls
 
 nuget Microsoft.SourceLink.GitHub

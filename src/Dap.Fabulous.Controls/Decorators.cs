@@ -1,6 +1,7 @@
 using System;
 
-using Microsoft.MAUI.Controls;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls;
 using Dap.Platform.Cli;
 
 namespace Dap.Fabulous.Controls {

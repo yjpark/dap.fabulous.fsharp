@@ -1,7 +1,8 @@
 
 using System;
 
-using Microsoft.MAUI.Controls;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls;
 
 namespace Dap.Fabulous.Controls {
     public class TextActionCell : TextCell {
@@ -12,18 +13,18 @@ namespace Dap.Fabulous.Controls {
         //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, string, Action, "")
         public static BindableProperty ActionProperty =                                     //__SILP__
             BindableProperty.Create("Action", typeof(string), typeof(TextActionCell), "");  //__SILP__
-        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionColor, Color.Black)
+        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionColor, Colors.Black)
         public static BindableProperty ActionColorProperty =                                             //__SILP__
-            BindableProperty.Create("ActionColor", typeof(Color), typeof(TextActionCell), Color.Black);  //__SILP__
-        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionPressedColor, Color.Gray)
+            BindableProperty.Create("ActionColor", typeof(Color), typeof(TextActionCell), Colors.Black);  //__SILP__
+        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionPressedColor, Colors.Gray)
         public static BindableProperty ActionPressedColorProperty =                                            //__SILP__
-            BindableProperty.Create("ActionPressedColor", typeof(Color), typeof(TextActionCell), Color.Gray);  //__SILP__
-        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionDisabledColor, Color.Gray)
+            BindableProperty.Create("ActionPressedColor", typeof(Color), typeof(TextActionCell), Colors.Gray);  //__SILP__
+        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionDisabledColor, Colors.Gray)
         public static BindableProperty ActionDisabledColorProperty =                                            //__SILP__
-            BindableProperty.Create("ActionDisabledColor", typeof(Color), typeof(TextActionCell), Color.Gray);  //__SILP__
-        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionBackgroundColor, Color.White)
+            BindableProperty.Create("ActionDisabledColor", typeof(Color), typeof(TextActionCell), Colors.Gray);  //__SILP__
+        //SILP: FABULOUS_CONTROL_BINDING_PROPERTY(TextActionCell, Color, ActionBackgroundColor, Colors.White)
         public static BindableProperty ActionBackgroundColorProperty =                                             //__SILP__
-            BindableProperty.Create("ActionBackgroundColor", typeof(Color), typeof(TextActionCell), Color.White);  //__SILP__
+            BindableProperty.Create("ActionBackgroundColor", typeof(Color), typeof(TextActionCell), Colors.White);  //__SILP__
 
         public event EventHandler OnAction;
 

@@ -1,6 +1,6 @@
 using System;
 
-using Microsoft.MAUI.Controls;
+using Microsoft.Maui.Controls;
 
 /*
  * Did implement TextActionCell in pure F#, got everything compiled and running.
