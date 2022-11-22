@@ -15,17 +15,12 @@ nuget Dap.Local
 nuget Dap.Skia
 nuget Dap.Gui
 
-# Forms
-nuget Microsoft.Maui
-
 # Fabuous
-nuget Fabulous.Core
-nuget Fabulous.CustomControls
-nuget Fabulous.LiveUpdate
+nuget Fabulous.MauiControls
 
-nuget Microsoft.SourceLink.GitHub prerelease
-nuget Microsoft.Build.Tasks.Git prerelease
-nuget Microsoft.SourceLink.Common prerelease
+nuget Microsoft.SourceLink.GitHub
+nuget Microsoft.Build.Tasks.Git
+nuget Microsoft.SourceLink.Common
 
-# group Build
+# Build
 nuget Dap.Build
