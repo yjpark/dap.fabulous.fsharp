@@ -1,6 +1,7 @@
 [<RequireQualifiedAccess>]
 module Dap.Fabulous.Decorator.TextCell
 
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 
 open Dap.Prelude

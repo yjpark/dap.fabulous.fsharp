@@ -1,6 +1,7 @@
 [<AutoOpen>]
 module Dap.Fabulous.Types
 
+open Microsoft.Maui
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 

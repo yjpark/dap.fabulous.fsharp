@@ -2,10 +2,11 @@ module Dap.Fabulous.View.Types
 
 open System.Threading.Tasks
 
+open Microsoft.Maui
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
-open Fabulous.Core
-open Fabulous.DynamicViews
+open Fabulous
+open Fabulous.Maui
 
 open Dap.Prelude
 open Dap.Platform
@@ -14,7 +15,7 @@ open Dap.Local
 [<Literal>]
 let Kind = "FormsView"
 
-type Widget = Fabulous.DynamicViews.ViewElement
+type Widget = Fabulous.ViewElement
 
 type Initer<'model, 'msg when 'model : not struct and 'msg :> IMsg> =
     IAgent<Msg<'model, 'msg>>

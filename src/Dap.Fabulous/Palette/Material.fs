@@ -1,6 +1,7 @@
 [<RequireQualifiedAccess>]
 module Dap.Fabulous.Palette.Material
 
+open Microsoft.Maui
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 

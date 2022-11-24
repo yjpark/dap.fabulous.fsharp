@@ -3,6 +3,8 @@ module Dap.Fabulous.Decorator.Util
 
 open System.Reflection
 
+open Microsoft.Maui
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 
 open Dap.Prelude

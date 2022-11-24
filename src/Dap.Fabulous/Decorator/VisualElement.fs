@@ -1,6 +1,8 @@
 [<RequireQualifiedAccess>]
 module Dap.Fabulous.Decorator.VisualElement
 
+open Microsoft.Maui
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 
 open Dap.Prelude

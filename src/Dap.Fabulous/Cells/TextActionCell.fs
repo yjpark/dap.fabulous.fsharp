@@ -5,7 +5,8 @@ open System
 
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
-open Fabulous.DynamicViews
+open Fabulous
+open Fabulous.Maui
 
 open Dap.Prelude
 open Dap.Context
@@ -145,7 +146,7 @@ type TextActionCellViewBuilder () =
         | ValueSome _, ValueNone ->                                                  //__SILP__
             (* Reset Action : string *)                                              //__SILP__
             target.Action <- ""                                                      //__SILP__
-        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionColor, Color.Black)
+        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionColor, Colors.Black)
         match prevActionColorOpt, currActionColorOpt with                            //__SILP__
         | ValueNone, ValueNone -> ()                                                 //__SILP__
         | ValueSome prevValue, ValueSome currValue when prevValue = currValue -> ()  //__SILP__
@@ -154,8 +155,8 @@ type TextActionCellViewBuilder () =
             target.ActionColor <- currValue                                          //__SILP__
         | ValueSome _, ValueNone ->                                                  //__SILP__
             (* Reset ActionColor : Color *)                                          //__SILP__
-            target.ActionColor <- Color.Black                                        //__SILP__
-        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionPressedColor, Color.Gray)
+            target.ActionColor <- Colors.Black                                        //__SILP__
+        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionPressedColor, Colors.Gray)
         match prevActionPressedColorOpt, currActionPressedColorOpt with              //__SILP__
         | ValueNone, ValueNone -> ()                                                 //__SILP__
         | ValueSome prevValue, ValueSome currValue when prevValue = currValue -> ()  //__SILP__
@@ -164,8 +165,8 @@ type TextActionCellViewBuilder () =
             target.ActionPressedColor <- currValue                                   //__SILP__
         | ValueSome _, ValueNone ->                                                  //__SILP__
             (* Reset ActionPressedColor : Color *)                                   //__SILP__
-            target.ActionPressedColor <- Color.Gray                                  //__SILP__
-        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionDisabledColor, Color.Gray)
+            target.ActionPressedColor <- Colors.Gray                                  //__SILP__
+        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionDisabledColor, Colors.Gray)
         match prevActionDisabledColorOpt, currActionDisabledColorOpt with            //__SILP__
         | ValueNone, ValueNone -> ()                                                 //__SILP__
         | ValueSome prevValue, ValueSome currValue when prevValue = currValue -> ()  //__SILP__
@@ -174,8 +175,8 @@ type TextActionCellViewBuilder () =
             target.ActionDisabledColor <- currValue                                  //__SILP__
         | ValueSome _, ValueNone ->                                                  //__SILP__
             (* Reset ActionDisabledColor : Color *)                                  //__SILP__
-            target.ActionDisabledColor <- Color.Gray                                 //__SILP__
-        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionBackgroundColor, Color.White)
+            target.ActionDisabledColor <- Colors.Gray                                 //__SILP__
+        //SILP: FABULOUS_CONTROL_VIEW_BUILDER_PROPERTY(TextActionCell, Color, ActionBackgroundColor, Colors.White)
         match prevActionBackgroundColorOpt, currActionBackgroundColorOpt with        //__SILP__
         | ValueNone, ValueNone -> ()                                                 //__SILP__
         | ValueSome prevValue, ValueSome currValue when prevValue = currValue -> ()  //__SILP__
@@ -184,4 +185,4 @@ type TextActionCellViewBuilder () =
             target.ActionBackgroundColor <- currValue                                //__SILP__
         | ValueSome _, ValueNone ->                                                  //__SILP__
             (* Reset ActionBackgroundColor : Color *)                                //__SILP__
-            target.ActionBackgroundColor <- Color.White                              //__SILP__
+            target.ActionBackgroundColor <- Colors.White                              //__SILP__

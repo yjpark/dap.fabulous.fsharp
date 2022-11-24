@@ -2,10 +2,11 @@
 module Dap.Fabulous.Util
 
 open System.Threading.Tasks
+open Microsoft.Maui
 open Microsoft.Maui.Essentials
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
-open Fabulous.DynamicViews
+open Fabulous
 
 open Dap.Prelude
 open Dap.Platform

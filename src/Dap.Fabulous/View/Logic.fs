@@ -1,9 +1,11 @@
 [<RequireQualifiedAccess>]
 module Dap.Fabulous.View.Logic
 
+open Microsoft.Maui
+open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
-open Fabulous.Core
-open Fabulous.DynamicViews
+open Fabulous
+open Fabulous.Maui
 
 open Dap.Prelude
 open Dap.Platform
@@ -62,7 +64,7 @@ let private initProgram (initer : Initer<'model, 'msg>) (args : Args<'pack, 'mod
     let subscribe = fun (model : 'model) ->
         args.Logic.Subscribe runner model
     let program =
-        Program.mkProgram init update view
+        Program.mkSimple init update view
         |> Program.withSubscription subscribe
     program
 

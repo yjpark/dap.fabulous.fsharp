@@ -1,6 +1,7 @@
 [<RequireQualifiedAccess>]
 module Dap.Fabulous.Decorator.Button
 
+open Microsoft.Maui
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
 

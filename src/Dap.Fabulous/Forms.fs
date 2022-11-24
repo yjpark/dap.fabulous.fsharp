@@ -1,9 +1,11 @@
 [<AutoOpen>]
 module Dap.Fabulous.BaseForm
 
+open Microsoft.Maui
 open Microsoft.Maui.Graphics
 open Microsoft.Maui.Controls
-open Fabulous.DynamicViews
+open Fabulous
+open Fabulous.Maui
 
 open Dap.Prelude
 open Dap.Context
@@ -24,6 +26,7 @@ type BaseForm<'form, 'page when 'form :> IPrefab and 'page :> Page> (logging : I
     interface IForm with
         member this.Page0 = this.Page :> Page
 
+(*
 let private createLoadingPage (backgroundColor : Color) (brandImage : string option) (brandImageX : float option) (brandImageY : float option) =
     let content' =
         brandImage
@@ -43,20 +46,21 @@ let private createLoadingPage (backgroundColor : Color) (brandImage : string opt
         )|> Option.defaultValue []
     let page =
         View.ContentPage (
-            content =
-                View.AbsoluteLayout (
-                    children = content',
-                    backgroundColor = backgroundColor
-                ),
-            backgroundColor = backgroundColor
+            "loading",
+            View.AbsoluteLayout (
+                backgroundColor = backgroundColor,
+                children = content'
+            )
         )
-    page.Create () :?> ContentPage
+    page.backgroundColor(backgroundColor)
+    page.Compile().Target :?> ContentPage
 
 type LoadingForm (logging : ILogging, backgroundColor : Color, ?brandImage : string, ?brandImageX : float, ?brandImageY : float) =
     inherit BaseForm<LoadingForm, ContentPage> (logging, createLoadingPage backgroundColor brandImage brandImageX brandImageY)
     new (l : ILogging) =
-        new LoadingForm (l, Color.White)
+        new LoadingForm (l, Colors.White)
     override this.Self = this
     override __.Spawn l = new LoadingForm (l)
     interface ILoadingForm
     interface IFallback
+*)
